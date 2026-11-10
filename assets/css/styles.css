@@ -1119,8 +1119,16 @@ a {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.35rem, 1.5vw, 1.25rem);
+}
+
+.gallery-more {
+  margin-top: 1.5rem;
+}
+
+.gallery-more[hidden] {
+  display: none;
 }
 
 .gallery-card {
@@ -1136,6 +1144,8 @@ a {
 .gallery-image-button {
   display: block;
   width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
   padding: 0;
   border: 0;
   background: var(--muted);
@@ -1143,13 +1153,14 @@ a {
 }
 
 .gallery-image-button img {
+  display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 100%;
   object-fit: cover;
 }
 
 .gallery-card figcaption {
-  padding: 0.8rem 1rem;
+  padding: clamp(0.35rem, 1.5vw, 0.8rem);
   font-weight: 600;
 }
 

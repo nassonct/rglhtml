@@ -24,9 +24,11 @@ Content pages are grouped under `pages/en/` and `pages/sw/`.
   content manifests. `assets/partners/partners.json` lists approved partner
   logo filenames stored in that folder; static hosting cannot safely discover
   directory contents without an explicit manifest.
-- `assets/gallery/` is reserved for approved gallery originals. Add new images
-  to `assets/data/gallery.json`; only verified existing product and operations
-  photos are listed today.
+- `assets/gallery/Community Engagement/`, `assets/gallery/Farmers Training/`,
+  and `assets/gallery/Official Visitors/` contain the gallery photos. Keep
+  their file lists in `assets/data/gallery.json` in sync when adding or
+  removing photos. The gallery initially displays up to eight photos at a
+  time; visitors can load more in batches.
 - `uploads/` is reserved for private uploads, is excluded from new Git changes,
   and is denied by its `.htaccess` file on Apache. Static hosts must not publish
   files from this folder.

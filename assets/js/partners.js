@@ -29,7 +29,7 @@
           && typeof partner.name === "string"
           && partner.name.trim()
           && typeof partner.logo === "string"
-          && /^[a-z0-9][a-z0-9._-]*\.(?:png|jpe?g|svg|webp)$/i.test(partner.logo);
+          && /^[a-z0-9][a-z0-9._ -]*\.(?:png|jpe?g|svg|webp)$/i.test(partner.logo);
       });
 
       if (!validPartners.length) {

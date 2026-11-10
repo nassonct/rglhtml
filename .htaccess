@@ -2,6 +2,7 @@ DirectoryIndex index.html
 Options -Indexes
 
 <IfModule mod_headers.c>
+  Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; script-src 'self'; form-action 'self' mailto:"
   Header always set X-Content-Type-Options "nosniff"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set X-Frame-Options "DENY"
@@ -10,6 +11,71 @@ Options -Indexes
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
+  RewriteBase /rglhtml/
+  RewriteRule ^(?:\.git|\.svn|\.hg)(?:/|$) - [F,L,NC]
+  RewriteRule (?:^|/)\.(?!well-known(?:/|$)) - [F,L,NC]
+  RewriteRule \.(?:env|sql|ini|log|bak|old|swp|conf|dist)$ - [F,L,NC]
+  # Legacy page redirects
+  RewriteRule ^product-beans\.html$ pages/en/products/product-beans.html [R=301,L]
+  RewriteRule ^product-groundnuts\.html$ pages/en/products/product-groundnuts.html [R=301,L]
+  RewriteRule ^product-maize\.html$ pages/en/products/product-maize.html [R=301,L]
+  RewriteRule ^product-milled-rice\.html$ pages/en/products/product-milled-rice.html [R=301,L]
+  RewriteRule ^product-other-grains\.html$ pages/en/products/product-other-grains.html [R=301,L]
+  RewriteRule ^product-sunflower\.html$ pages/en/products/product-sunflower.html [R=301,L]
+  RewriteRule ^products-beans\.html$ pages/en/products/products-beans.html [R=301,L]
+  RewriteRule ^products-groundnuts\.html$ pages/en/products/products-groundnuts.html [R=301,L]
+  RewriteRule ^products-maize\.html$ pages/en/products/products-maize.html [R=301,L]
+  RewriteRule ^products-other-grains\.html$ pages/en/products/products-other-grains.html [R=301,L]
+  RewriteRule ^products-rice\.html$ pages/en/products/products-rice.html [R=301,L]
+  RewriteRule ^products-sunflower\.html$ pages/en/products/products-sunflower.html [R=301,L]
+  RewriteRule ^products\.html$ pages/en/products/products.html [R=301,L]
+  RewriteRule ^business-agricultural-products\.html$ pages/en/businesses/business-agricultural-products.html [R=301,L]
+  RewriteRule ^business-agro-processing\.html$ pages/en/businesses/business-agro-processing.html [R=301,L]
+  RewriteRule ^business-energy-fuel\.html$ pages/en/businesses/business-energy-fuel.html [R=301,L]
+  RewriteRule ^business-trading-distribution\.html$ pages/en/businesses/business-trading-distribution.html [R=301,L]
+  RewriteRule ^businesses\.html$ pages/en/businesses/businesses.html [R=301,L]
+  RewriteRule ^contact-business\.html$ pages/en/contact/contact-business.html [R=301,L]
+  RewriteRule ^contact-careers\.html$ pages/en/contact/contact-careers.html [R=301,L]
+  RewriteRule ^contact-farmer\.html$ pages/en/contact/contact-farmer.html [R=301,L]
+  RewriteRule ^contact-product\.html$ pages/en/contact/contact-product.html [R=301,L]
+  RewriteRule ^contact\.html$ pages/en/contact/contact.html [R=301,L]
+  RewriteRule ^sell-your-produce\.html$ pages/en/contact/sell-your-produce.html [R=301,L]
+  RewriteRule ^about\.html$ pages/en/company/about.html [R=301,L]
+  RewriteRule ^careers\.html$ pages/en/company/careers.html [R=301,L]
+  RewriteRule ^markets\.html$ pages/en/company/markets.html [R=301,L]
+  RewriteRule ^news\.html$ pages/en/company/news.html [R=301,L]
+  RewriteRule ^privacy\.html$ pages/en/company/privacy.html [R=301,L]
+  RewriteRule ^terms\.html$ pages/en/company/terms.html [R=301,L]
+  RewriteRule ^sw/product-beans\.html$ pages/sw/products/product-beans.html [R=301,L]
+  RewriteRule ^sw/product-groundnuts\.html$ pages/sw/products/product-groundnuts.html [R=301,L]
+  RewriteRule ^sw/product-maize\.html$ pages/sw/products/product-maize.html [R=301,L]
+  RewriteRule ^sw/product-milled-rice\.html$ pages/sw/products/product-milled-rice.html [R=301,L]
+  RewriteRule ^sw/product-other-grains\.html$ pages/sw/products/product-other-grains.html [R=301,L]
+  RewriteRule ^sw/product-sunflower\.html$ pages/sw/products/product-sunflower.html [R=301,L]
+  RewriteRule ^sw/products-beans\.html$ pages/sw/products/products-beans.html [R=301,L]
+  RewriteRule ^sw/products-groundnuts\.html$ pages/sw/products/products-groundnuts.html [R=301,L]
+  RewriteRule ^sw/products-maize\.html$ pages/sw/products/products-maize.html [R=301,L]
+  RewriteRule ^sw/products-other-grains\.html$ pages/sw/products/products-other-grains.html [R=301,L]
+  RewriteRule ^sw/products-rice\.html$ pages/sw/products/products-rice.html [R=301,L]
+  RewriteRule ^sw/products-sunflower\.html$ pages/sw/products/products-sunflower.html [R=301,L]
+  RewriteRule ^sw/products\.html$ pages/sw/products/products.html [R=301,L]
+  RewriteRule ^sw/business-agricultural-products\.html$ pages/sw/businesses/business-agricultural-products.html [R=301,L]
+  RewriteRule ^sw/business-agro-processing\.html$ pages/sw/businesses/business-agro-processing.html [R=301,L]
+  RewriteRule ^sw/business-energy-fuel\.html$ pages/sw/businesses/business-energy-fuel.html [R=301,L]
+  RewriteRule ^sw/business-trading-distribution\.html$ pages/sw/businesses/business-trading-distribution.html [R=301,L]
+  RewriteRule ^sw/businesses\.html$ pages/sw/businesses/businesses.html [R=301,L]
+  RewriteRule ^sw/contact-business\.html$ pages/sw/contact/contact-business.html [R=301,L]
+  RewriteRule ^sw/contact-careers\.html$ pages/sw/contact/contact-careers.html [R=301,L]
+  RewriteRule ^sw/contact-farmer\.html$ pages/sw/contact/contact-farmer.html [R=301,L]
+  RewriteRule ^sw/contact-product\.html$ pages/sw/contact/contact-product.html [R=301,L]
+  RewriteRule ^sw/contact\.html$ pages/sw/contact/contact.html [R=301,L]
+  RewriteRule ^sw/sell-your-produce\.html$ pages/sw/contact/sell-your-produce.html [R=301,L]
+  RewriteRule ^sw/about\.html$ pages/sw/company/about.html [R=301,L]
+  RewriteRule ^sw/careers\.html$ pages/sw/company/careers.html [R=301,L]
+  RewriteRule ^sw/markets\.html$ pages/sw/company/markets.html [R=301,L]
+  RewriteRule ^sw/news\.html$ pages/sw/company/news.html [R=301,L]
+  RewriteRule ^sw/privacy\.html$ pages/sw/company/privacy.html [R=301,L]
+  RewriteRule ^sw/terms\.html$ pages/sw/company/terms.html [R=301,L]
   RewriteRule ^uploads(?:/|$) - [F,L]
 </IfModule>
 

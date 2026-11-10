@@ -1,0 +1,42 @@
+{
+  "en": [
+    {
+      "id": "mbeya",
+      "name": "Mbeya",
+      "status": "Company headquarters region; branch details are pending confirmation.",
+      "branches": []
+    },
+    {
+      "id": "dar-es-salaam",
+      "name": "Dar es Salaam",
+      "status": "Region supplied by the company; branch details are pending confirmation.",
+      "branches": []
+    },
+    {
+      "id": "dodoma",
+      "name": "Dodoma",
+      "status": "Region supplied by the company; branch details are pending confirmation.",
+      "branches": []
+    }
+  ],
+  "sw": [
+    {
+      "id": "mbeya",
+      "name": "Mbeya",
+      "status": "Eneo la makao makuu ya kampuni; maelezo ya tawi yanasubiri uthibitisho.",
+      "branches": []
+    },
+    {
+      "id": "dar-es-salaam",
+      "name": "Dar es Salaam",
+      "status": "Mkoa uliotolewa na kampuni; maelezo ya matawi yanasubiri uthibitisho.",
+      "branches": []
+    },
+    {
+      "id": "dodoma",
+      "name": "Dodoma",
+      "status": "Mkoa uliotolewa na kampuni; maelezo ya tawi yanasubiri uthibitisho.",
+      "branches": []
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /uploads/
+Disallow: /admincsd.html
+Sitemap: https://nassonct.github.io/rglhtml/sitemap.xml

@@ -1,0 +1,133 @@
+{
+  "categories": [
+    { "id": "community", "en": "Community Engagement", "sw": "Ushirikiano na Jamii" },
+    { "id": "training", "en": "Farmer Education & Training", "sw": "Elimu na Mafunzo kwa Wakulima" },
+    { "id": "visitors", "en": "Special Visitors & Official Visits", "sw": "Wageni Maalum na Ziara Rasmi" },
+    { "id": "products", "en": "Products", "sw": "Bidhaa" },
+    { "id": "operations", "en": "Business Operations", "sw": "Shughuli za Biashara" },
+    { "id": "corporate", "en": "Corporate Activities", "sw": "Shughuli za Kampuni" },
+    { "id": "events", "en": "Other Company Events", "sw": "Matukio Mengine ya Kampuni" }
+  ],
+  "images": [
+    {
+      "src": "assets/img/rice.jpg",
+      "width": 643,
+      "height": 360,
+      "category": "products",
+      "alt": "Milled white rice in a woven basket",
+      "altSw": "Mchele mweupe uliokobolewa ndani ya kikapu",
+      "caption": "Milled rice",
+      "captionSw": "Mchele uliokobolewa"
+    },
+    {
+      "src": "assets/img/beans.jpg",
+      "width": 1200,
+      "height": 900,
+      "category": "products",
+      "alt": "Dried beans ready for sorting",
+      "altSw": "Maharage yaliyokaushwa tayari kwa kupangwa",
+      "caption": "Beans",
+      "captionSw": "Maharage"
+    },
+    {
+      "src": "assets/img/maize.jpg",
+      "width": 1200,
+      "height": 900,
+      "category": "products",
+      "alt": "Dried maize grain spilling from a sack",
+      "altSw": "Mahindi yaliyokaushwa yakimwagika kutoka gunia",
+      "caption": "Maize",
+      "captionSw": "Mahindi"
+    },
+    {
+      "src": "assets/img/groundnuts.jpg",
+      "width": 1200,
+      "height": 900,
+      "category": "products",
+      "alt": "Shelled groundnuts in a bowl",
+      "altSw": "Karanga zilizomenywa ndani ya bakuli",
+      "caption": "Groundnuts",
+      "captionSw": "Karanga"
+    },
+    {
+      "src": "assets/img/sunflower.jpg",
+      "width": 1200,
+      "height": 900,
+      "category": "products",
+      "alt": "Sunflower seeds and sunflower oil",
+      "altSw": "Mbegu za alizeti na mafuta ya alizeti",
+      "caption": "Sunflower products",
+      "captionSw": "Bidhaa za alizeti"
+    },
+    {
+      "src": "assets/img/grains.jpg",
+      "width": 1200,
+      "height": 900,
+      "category": "products",
+      "alt": "Assorted grains in wooden bowls",
+      "altSw": "Nafaka mbalimbali ndani ya mabakuli ya mbao",
+      "caption": "Other grains",
+      "captionSw": "Nafaka nyingine"
+    },
+    {
+      "src": "assets/img/aerial-facility.jpg",
+      "width": 1920,
+      "height": 1088,
+      "category": "operations",
+      "alt": "Aerial view of a grain storage and processing facility",
+      "altSw": "Mwonekano wa juu wa kituo cha kuhifadhi na kuchakata nafaka",
+      "caption": "Processing facility",
+      "captionSw": "Kituo cha uchakataji"
+    },
+    {
+      "src": "assets/img/milling-plant.jpg",
+      "width": 1408,
+      "height": 1008,
+      "category": "operations",
+      "alt": "Grain milling machinery inside a processing plant",
+      "altSw": "Mashine za kusaga nafaka ndani ya kiwanda cha uchakataji",
+      "caption": "Milling operations",
+      "captionSw": "Shughuli za kusaga nafaka"
+    },
+    {
+      "src": "assets/img/warehouse.jpg",
+      "width": 1535,
+      "height": 1024,
+      "category": "operations",
+      "alt": "Graded grain stored in a warehouse ready for dispatch",
+      "altSw": "Nafaka zilizopangwa zikiwa ghalani tayari kwa kusafirishwa",
+      "caption": "Warehouse",
+      "captionSw": "Ghala"
+    },
+    {
+      "src": "assets/img/trucks.jpg",
+      "width": 1537,
+      "height": 1023,
+      "category": "operations",
+      "alt": "Cargo trucks at a distribution depot",
+      "altSw": "Malori ya mizigo katika kituo cha usambazaji",
+      "caption": "Distribution fleet",
+      "captionSw": "Usambazaji"
+    },
+    {
+      "src": "assets/img/fuel-station.jpg",
+      "width": 1254,
+      "height": 1254,
+      "category": "operations",
+      "alt": "Fuel station with a tanker nearby",
+      "altSw": "Kituo cha mafuta chenye lori la mafuta karibu",
+      "caption": "Fuel retail",
+      "captionSw": "Uuzaji wa mafuta"
+    },
+    {
+      "src": "assets/img/farmland.jpg",
+      "width": 1920,
+      "height": 1000,
+      "category": "operations",
+      "alt": "Green maize farmland in Tanzania",
+      "altSw": "Shamba la mahindi mabichi nchini Tanzania",
+      "caption": "Agricultural sourcing context",
+      "captionSw": "Mazingira ya ukusanyaji wa mazao"
+    }
+  ]
+}

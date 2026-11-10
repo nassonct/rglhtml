@@ -14,15 +14,19 @@ language switcher links between matching pages in both editions.
 
 ## Structure
 
-- `index.html`, `about.html`, `products.html`, `businesses.html`, `markets.html`,
-  `contact.html`, `sell-your-produce.html`, `news.html`, `careers.html`,
-  `privacy.html`, `terms.html`, and `404.html` are the main pages.
-- `product-*.html` and `business-*.html` are individual product and business
-  pages. `products-*.html` are the product category pages.
-- `contact-*.html` preselect enquiry types on the contact form.
-- `sw/` contains the Kiswahili equivalents of all static pages.
-- `assets/css/styles.css`, `assets/js/main.js`, and `assets/img/` contain the
-  site styles, progressive interactions, and images.
+- `index.html` and `sw/index.html` are the English and Kiswahili homepages.
+- `pages/en/` and `pages/sw/` organize the remaining pages by topic:
+  `products/`, `businesses/`, `contact/`, and `company/`.
+- `404.html` and `sw/404.html` are the custom not-found pages.
+- `assets/css/`, `assets/js/`, and `assets/img/` contain shared styles,
+  progressive interactions, and images.
+- `uploads/` contains a retained private upload and must not be published
+  unprotected. Apache deployments are denied access by its `.htaccess` file;
+  other hosts must apply an equivalent deny rule or omit the directory.
+
+Grouped pages now use `/pages/en/...` and `/pages/sw/...` URLs. If older page
+URLs have already been published or indexed, configure permanent redirects
+from those URLs on the hosting platform before launch.
 
 ## Enquiry forms
 
@@ -32,7 +36,13 @@ store it. Attachments must be added manually in the email application.
 
 ## Hosting
 
-Deploy the files to any static web host. If using Apache, `.htaccess` sets the
-HTML directory index and security headers; update its 404 path if the site is
-installed somewhere other than `/rgl/`. The private `uploads/` directory is
-retained from the prior deployment and remains blocked from web access.
+Deploy the repository root as the site document root on a static host. The
+included `.htaccess` applies security headers, disables directory listings,
+blocks `uploads/`, and configures the custom 404 page on Apache; `.htaccess` is
+ignored by many other hosts, which need equivalent settings in their hosting
+configuration. If the site is hosted below a URL prefix, update the Apache
+`ErrorDocument` path accordingly.
+
+Use HTTPS in production. Configure HTTPS redirects and HSTS at the hosting
+provider after confirming the domain and TLS setup. Enquiry forms open a draft
+in the visitor's email application; they do not submit to a server.

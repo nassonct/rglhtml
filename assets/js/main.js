@@ -26,12 +26,19 @@
   Array.prototype.forEach.call(slideshows, function (slideshow) {
     var slides = slideshow.querySelectorAll(".hero__slide");
     var interval = parseInt(slideshow.getAttribute("data-interval") || "3000", 10);
+    var motionPreference = window.matchMedia
+      ? window.matchMedia("(prefers-reduced-motion: reduce)")
+      : null;
 
-    if (slides.length < 2) {
+    if (slides.length < 2 || (motionPreference && motionPreference.matches)) {
       return;
     }
 
     window.setInterval(function () {
+      if (document.hidden || (motionPreference && motionPreference.matches)) {
+        return;
+      }
+
       var current = slideshow.querySelector(".hero__slide.is-active");
       var currentIndex = Array.prototype.indexOf.call(slides, current);
       var next = slides[(currentIndex + 1) % slides.length];

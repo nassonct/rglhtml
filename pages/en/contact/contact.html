@@ -105,11 +105,11 @@
                   </div>
         <div>
           <p class="eyebrow">Phone number</p>
-          <p>+255 784 409 340/ +255 764 717 282</p>
+          <p>+255 784 409 340</p>
         </div>
         <div>
           <p class="eyebrow">Email address</p>
-          <p>raphaelgroupltd@gmail.com</p>
+          <p>admin@raphaelgroupltd.co.tz</p>
         </div>
         <div>
           <p class="eyebrow">Business hours</p>
@@ -137,10 +137,10 @@
     <div>
       <h2 class="display-3 text-primary">Send an enquiry</h2>
       
-  <p class="hint form-email-note">Submitting opens a draft in your email app. Review it and press Send. Attach files manually in your email app—this site does not upload or store attachments. You can also email us directly at <a href="mailto:raphaelgroupltd@gmail.com">raphaelgroupltd@gmail.com</a>.</p><form id="enquiry"
+  <p class="hint form-email-note">Submitting opens a draft in your email app. Review it and press Send. Attach files manually in your email app—this site does not upload or store attachments. You can also email us directly at <a href="mailto:admin@raphaelgroupltd.co.tz">admin@raphaelgroupltd.co.tz</a>.</p><form id="enquiry"
         class="enquiry-form"
         method="post"
-        action="mailto:raphaelgroupltd@gmail.com"
+        action="mailto:admin@raphaelgroupltd.co.tz"
         enctype="text/plain"
         novalidate
         data-enquiry-form
@@ -210,6 +210,93 @@
   </div>
 </section>
 
+<section class="section section--muted" aria-labelledby="branch-office-heading">
+  <div class="container">
+    <div class="stack" style="max-width:48rem;">
+      <p class="eyebrow">Our locations</p>
+      <h2 class="display-2 text-primary" id="branch-office-heading">Add branch or office details</h2>
+      <p class="lead">Share details about a Raphael Group branch or office in Mbeya, Dar es Salaam, or Dodoma.</p>
+      <p class="hint form-email-note">Submitting opens a draft in your email app. Review the details and press Send. This website does not store submissions. You can also email us directly at <a href="mailto:admin@raphaelgroupltd.co.tz">admin@raphaelgroupltd.co.tz</a>.</p>
+
+      <form class="enquiry-form"
+        method="post"
+        action="mailto:admin@raphaelgroupltd.co.tz"
+        enctype="text/plain"
+        novalidate
+        data-enquiry-form
+        data-msg-contact="Please provide either a branch email address or a phone number.">
+        <p class="alert alert--error" data-form-error hidden role="alert"></p>
+
+        <div class="form-grid">
+          <div class="field">
+            <label for="branchName">Branch or office name <span class="req" aria-hidden="true">*</span></label>
+            <input id="branchName" name="branch_name" required minlength="2" maxlength="160" autocomplete="organization">
+          </div>
+
+          <div class="field">
+            <label for="branchType">Location type <span class="req" aria-hidden="true">*</span></label>
+            <select id="branchType" name="enquiry_type" required>
+              <option value="">Select a type</option>
+              <option value="Branch">Branch</option>
+              <option value="Office">Office</option>
+              <option value="Headquarters">Headquarters</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="branchCity">City <span class="req" aria-hidden="true">*</span></label>
+            <select id="branchCity" name="city" required>
+              <option value="">Select a city</option>
+              <option value="Mbeya">Mbeya</option>
+              <option value="Dar es Salaam">Dar es Salaam</option>
+              <option value="Dodoma">Dodoma</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="branchArea">Area or neighbourhood</label>
+            <input id="branchArea" name="area" maxlength="120" autocomplete="address-level3">
+          </div>
+
+          <div class="field field--full">
+            <label for="branchAddress">Street address <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="branchAddress" name="street_address" required minlength="5" maxlength="500" rows="3" autocomplete="street-address"></textarea>
+          </div>
+
+          <div class="field">
+            <label for="branchPhone">Branch phone number</label>
+            <input id="branchPhone" name="phone" type="tel" maxlength="32" autocomplete="tel">
+          </div>
+
+          <div class="field">
+            <label for="branchEmail">Branch email address</label>
+            <input id="branchEmail" name="email" type="email" maxlength="254" autocomplete="email">
+          </div>
+
+          <div class="field">
+            <label for="branchHours">Business hours</label>
+            <input id="branchHours" name="business_hours" maxlength="120" placeholder="e.g. Monday–Friday, 08:00–17:00">
+          </div>
+
+          <div class="field">
+            <label for="branchContact">Contact person</label>
+            <input id="branchContact" name="contact_person" maxlength="120" autocomplete="name">
+          </div>
+
+          <div class="field field--full">
+            <label for="branchServices">Services or additional details</label>
+            <textarea id="branchServices" name="services_and_details" maxlength="2000" rows="4"></textarea>
+          </div>
+        </div>
+
+        <p class="hint" style="margin-top:1.25rem;">Provide at least a branch phone number or email address so visitors can get in touch.</p>
+        <button class="btn btn--primary" type="submit" style="margin-top:1.25rem;">Prepare branch details email</button>
+      </form>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <footer class="site-footer">
@@ -253,8 +340,8 @@
         <h3>Contact us</h3>
         <ul>
                       <li>Mbeya, Tanzania</li>
-                    <li>+255 784 409 340/ +255 764 717 282</li>
-          <li>raphaelgroupltd@gmail.com</li>
+                    <li>+255 784 409 340</li>
+          <li>admin@raphaelgroupltd.co.tz</li>
           <li><a href="sell-your-produce.html">Sell Your Produce to RGL</a></li>
           <li><a href="../company/news.html">News</a></li>
           <li><a href="../company/careers.html">Careers</a></li>

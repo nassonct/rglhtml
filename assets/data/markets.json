@@ -3,40 +3,86 @@
     {
       "id": "mbeya",
       "name": "Mbeya",
-      "status": "Company headquarters region; branch details are pending confirmation.",
-      "branches": []
+      "status": "Location details are listed below.",
+      "branches": [
+        {
+          "name": "Mbeya Headquarters",
+          "address": "Uyole-Makasini",
+          "phones": ["+255 784 409 340"]
+        }
+      ]
     },
     {
       "id": "dar-es-salaam",
       "name": "Dar es Salaam",
-      "status": "Region supplied by the company; branch details are pending confirmation.",
-      "branches": []
+      "status": "Location details are listed below.",
+      "branches": [
+        {
+          "name": "Sinza Branch",
+          "address": "Dar es salaam-Sinza",
+          "phones": ["+255 784 409 340"]
+        },
+        {
+          "name": "Tabata Branch",
+          "address": "Dar es salaam- Tabata",
+          "phones": ["+255 784 409 340"]
+        }
+      ]
     },
     {
       "id": "dodoma",
       "name": "Dodoma",
-      "status": "Region supplied by the company; branch details are pending confirmation.",
-      "branches": []
+      "status": "Location details are listed below.",
+      "branches": [
+        {
+          "name": "Dodoma",
+          "address": "Barabara ya Chako ni Chako",
+          "phones": ["0765 356 557", "0754 666 799"]
+        }
+      ]
     }
   ],
   "sw": [
     {
       "id": "mbeya",
       "name": "Mbeya",
-      "status": "Eneo la makao makuu ya kampuni; maelezo ya tawi yanasubiri uthibitisho.",
-      "branches": []
+      "status": "Taarifa za eneo zimeorodheshwa hapa chini.",
+      "branches": [
+        {
+          "name": "Mbeya Headquarters",
+          "address": "Uyole-Makasini",
+          "phones": ["+255 784 409 340"]
+        }
+      ]
     },
     {
       "id": "dar-es-salaam",
       "name": "Dar es Salaam",
-      "status": "Mkoa uliotolewa na kampuni; maelezo ya matawi yanasubiri uthibitisho.",
-      "branches": []
+      "status": "Taarifa za maeneo zimeorodheshwa hapa chini.",
+      "branches": [
+        {
+          "name": "Sinza Branch",
+          "address": "Dar es salaam-Sinza",
+          "phones": ["+255 784 409 340"]
+        },
+        {
+          "name": "Tabata Branch",
+          "address": "Dar es salaam- Tabata",
+          "phones": ["+255 784 409 340"]
+        }
+      ]
     },
     {
       "id": "dodoma",
       "name": "Dodoma",
-      "status": "Mkoa uliotolewa na kampuni; maelezo ya tawi yanasubiri uthibitisho.",
-      "branches": []
+      "status": "Taarifa za eneo zimeorodheshwa hapa chini.",
+      "branches": [
+        {
+          "name": "Dodoma",
+          "address": "Barabara ya Chako ni Chako",
+          "phones": ["0765 356 557", "0754 666 799"]
+        }
+      ]
     }
   ]
 }

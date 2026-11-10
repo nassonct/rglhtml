@@ -22,19 +22,84 @@
     return element;
   }
 
+  function copyPhone(phone, status) {
+    function report(success, error) {
+      if (error) {
+        console.error("Could not copy branch phone number.", error);
+      }
+      status.textContent = success
+        ? (language === "sw" ? "Namba imenakiliwa." : "Phone number copied.")
+        : (language === "sw" ? "Namba haikuweza kunakiliwa." : "Could not copy the phone number.");
+    }
+
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(phone).then(function () {
+        report(true);
+      }, function (error) {
+        report(false, error);
+      });
+      return;
+    }
+
+    var input = document.createElement("textarea");
+    input.value = phone;
+    input.setAttribute("readonly", "");
+    input.style.position = "fixed";
+    input.style.opacity = "0";
+    document.body.appendChild(input);
+    input.select();
+
+    var copied = false;
+    try {
+      copied = document.execCommand("copy");
+    } catch (error) {
+      report(false, error);
+      document.body.removeChild(input);
+      return;
+    }
+    document.body.removeChild(input);
+    report(copied, copied ? null : new Error("Clipboard copy command was not successful."));
+  }
+
+  root.addEventListener("click", function (event) {
+    var button = event.target.closest("[data-copy-phone]");
+    if (!button || !root.contains(button)) {
+      return;
+    }
+
+    var card = button.closest(".branch-card");
+    var status = card && card.querySelector("[data-copy-status]");
+    if (status) {
+      copyPhone(button.getAttribute("data-copy-phone"), status);
+    }
+  });
+
   function renderBranch(branch, regionName) {
     var card = document.createElement("article");
     card.className = "card card--plain branch-card";
     appendText(card, "h4", "display-3", branch.name || (language === "sw" ? "Jina litathibitishwa" : "Name to be confirmed"));
     appendText(card, "p", "", regionName);
     appendText(card, "p", "", branch.address || (language === "sw" ? "Anwani haijathibitishwa." : "Address not yet confirmed."));
-    appendText(card, "p", "", branch.description || (language === "sw" ? "Maelezo ya huduma hayajathibitishwa." : "Service details not yet confirmed."));
 
-    if (branch.phone) {
-      var telephone = document.createElement("a");
-      telephone.href = "tel:" + branch.phone.replace(/[^\d+]/g, "");
-      telephone.textContent = branch.phone;
-      card.appendChild(telephone);
+    if (branch.description) {
+      appendText(card, "p", "", branch.description);
+    }
+
+    var phones = Array.isArray(branch.phones) ? branch.phones : (branch.phone ? [branch.phone] : []);
+    if (phones.length) {
+      phones.forEach(function (phone) {
+        var copyButton = document.createElement("button");
+        copyButton.className = "copy-phone";
+        copyButton.type = "button";
+        copyButton.setAttribute("data-copy-phone", phone);
+        copyButton.setAttribute("aria-label", (language === "sw" ? "Nakili namba ya simu " : "Copy phone number ") + phone);
+        copyButton.textContent = phone;
+        card.appendChild(copyButton);
+      });
+      var copyStatus = appendText(card, "span", "copy-status", "");
+      copyStatus.setAttribute("data-copy-status", "");
+      copyStatus.setAttribute("role", "status");
+      copyStatus.setAttribute("aria-live", "polite");
     } else {
       appendText(card, "p", "muted", language === "sw" ? "Namba ya simu haijathibitishwa." : "Telephone number not yet confirmed.");
     }

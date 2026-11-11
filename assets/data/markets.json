@@ -19,13 +19,13 @@
       "branches": [
         {
           "name": "Sinza Branch",
-          "address": "Dar es salaam-Sinza",
-          "phones": ["+255 784 409 340"]
+          "address": "Sinza kwa Remmy",
+          "phones": ["+255 754 666 799"]
         },
         {
           "name": "Tabata Branch",
-          "address": "Dar es salaam- Tabata",
-          "phones": ["+255 784 409 340"]
+          "address": "Tabata",
+          "phones": ["+255 692 301 883"]
         }
       ]
     },
@@ -35,9 +35,9 @@
       "status": "Location details are listed below.",
       "branches": [
         {
-          "name": "Dodoma",
-          "address": "Barabara ya Chako ni Chako",
-          "phones": ["0765 356 557", "0754 666 799"]
+          "name": "Dodoma Branch",
+          "address": "Airport Chako ni Chako",
+          "phones": ["+255 758 352 764"]
         }
       ]
     }
@@ -62,13 +62,13 @@
       "branches": [
         {
           "name": "Sinza Branch",
-          "address": "Dar es salaam-Sinza",
-          "phones": ["+255 784 409 340"]
+          "address": "Sinza kwa Remmy",
+          "phones": ["+255 754 666 799"]
         },
         {
           "name": "Tabata Branch",
-          "address": "Dar es salaam- Tabata",
-          "phones": ["+255 784 409 340"]
+          "address": "Tabata",
+          "phones": ["+255 692 301 883"]
         }
       ]
     },
@@ -78,9 +78,9 @@
       "status": "Taarifa za eneo zimeorodheshwa hapa chini.",
       "branches": [
         {
-          "name": "Dodoma",
-          "address": "Barabara ya Chako ni Chako",
-          "phones": ["0765 356 557", "0754 666 799"]
+          "name": "Dodoma Branch",
+          "address": "Airport Chako ni Chako",
+          "phones": ["+255 758 352 764"]
         }
       ]
     }

@@ -22,6 +22,15 @@
     return element;
   }
 
+  function appendField(parent, label, value) {
+    var field = document.createElement("p");
+    var fieldLabel = document.createElement("strong");
+    fieldLabel.textContent = label + ": ";
+    field.appendChild(fieldLabel);
+    field.appendChild(document.createTextNode(value));
+    parent.appendChild(field);
+  }
+
   function copyPhone(phone, status) {
     function report(success, error) {
       if (error) {
@@ -77,9 +86,18 @@
   function renderBranch(branch, regionName) {
     var card = document.createElement("article");
     card.className = "card card--plain branch-card";
-    appendText(card, "h4", "display-3", branch.name || (language === "sw" ? "Jina litathibitishwa" : "Name to be confirmed"));
-    appendText(card, "p", "", regionName);
-    appendText(card, "p", "", branch.address || (language === "sw" ? "Anwani haijathibitishwa." : "Address not yet confirmed."));
+    appendText(
+      card,
+      "h4",
+      "display-3",
+      (language === "sw" ? "Jina: " : "Name: ") + (branch.name || (language === "sw" ? "Litathibitishwa" : "To be confirmed"))
+    );
+    appendField(card, language === "sw" ? "Eneo" : "Location", regionName);
+    appendField(
+      card,
+      language === "sw" ? "Anwani" : "Address",
+      branch.address || (language === "sw" ? "Haijathibitishwa." : "Not yet confirmed.")
+    );
 
     if (branch.description) {
       appendText(card, "p", "", branch.description);
@@ -87,6 +105,7 @@
 
     var phones = Array.isArray(branch.phones) ? branch.phones : (branch.phone ? [branch.phone] : []);
     if (phones.length) {
+      appendField(card, language === "sw" ? "Simu" : "Phone", "");
       phones.forEach(function (phone) {
         var copyButton = document.createElement("button");
         copyButton.className = "copy-phone";
@@ -101,7 +120,11 @@
       copyStatus.setAttribute("role", "status");
       copyStatus.setAttribute("aria-live", "polite");
     } else {
-      appendText(card, "p", "muted", language === "sw" ? "Namba ya simu haijathibitishwa." : "Telephone number not yet confirmed.");
+      appendField(
+        card,
+        language === "sw" ? "Simu" : "Phone",
+        language === "sw" ? "Namba haijathibitishwa." : "Number not yet confirmed."
+      );
     }
 
     if (branch.mapsUrl && /^https:\/\/(?:(?:www\.)?google\.com|maps\.google\.com)\/maps(?:\/|$)/i.test(branch.mapsUrl)) {

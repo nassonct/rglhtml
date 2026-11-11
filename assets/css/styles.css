@@ -786,6 +786,10 @@ a {
   background: var(--muted);
 }
 
+.leadership-grid .card__media {
+  aspect-ratio: 3 / 4;
+}
+
 .card__media img {
   width: 100%;
   height: 100%;
